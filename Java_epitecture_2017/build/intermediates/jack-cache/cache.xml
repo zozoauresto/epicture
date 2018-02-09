@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-bbd50360e36eed7ec510dad7cea0afcb7907ce31.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\AppData\Local\Android\sdk\platforms\android-24\android.jar"
+        revision="24.0.3"
+        sha1="d49cc0972df7adf495d3ad3d0cf71c0ec517ace4">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-eebcde2168dc02059647f3d8cf1d1f5de43f6083.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9e3c648e670fe648526a8165aa10e18eeb7603fe.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\org.apmem.tools\layouts\1.8\jars\classes.jar"
+        revision="24.0.3"
+        sha1="d2c9b8eefd9172da44088725defc921ef472ebb6">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-510e92d802b319f32135774ea81970d3fe6c6756.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\net.danlew\android.joda\2.7.2\jars\classes.jar"
+        revision="24.0.3"
+        sha1="c79e5c6924bdea6803bf59dda1d09d0cda710cae">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-13280eb24555e827be81c09b00f44b182b3c102c.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\AppData\Local\Android\sdk\platforms\android-24\optional\org.apache.http.legacy.jar"
+        revision="24.0.3"
+        sha1="fb7023e781abb70ed1b0442eb611fbed295cae84">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-b72eec0bb40e260e6a054a7ce617bbb0ee9aa1bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ae5fbcb3dbc8929af1c5f37dc9f984c0851eb246.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.davemorrissey.labs\subsampling-scale-image-view\2.3.0\jars\classes.jar"
+        revision="24.0.3"
+        sha1="705ffc2c856ea563f08d87cc59e797eb37c69e3f">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2a02332df10a576060b52ad23728dc475c9abe3e.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
+        revision="24.0.3"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-5e2d05805a81018abe80eaa1f2345ac7e63f9f57.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-24.2.1-357334932cfb7ad914ac80a191f9dfaee3240508.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.7\b321fd17a60912973a8344da427487c65ccbb552\joda-time-2.7-no-tzdb.jar"
+        revision="24.0.3"
+        sha1="b321fd17a60912973a8344da427487c65ccbb552">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\joda-time-2.7-no-tzdb-06e524795f74d922b017bc229ad600d0a533a21c.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-7d985936450438e7611a716128a2d8ca65204633.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-3c86c32b1dbf81dfd5305278982f37e1a5239ff2.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\jp.wasabeef\blurry\2.0.3\jars\classes.jar"
+        revision="24.0.3"
+        sha1="a8951607beee5c015fe22653b9bdc84fdb145f8a">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4f426587d4fdb518973174bd166e310a901a3865.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3c75db592920d8d123367186eeb37ef602d76b43.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e39574966c61c88c30d4c3f7a5119bb92e29cd05.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1f145298c1032e2221b959eda572d444e5b70b32.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-9fe31a4d454c07ab07bd9d730d366d3075ed9340.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.github.michaelye.easydialog\easydialog\1.4\jars\classes.jar"
+        revision="24.0.3"
+        sha1="1e356c8320c39422774a9259198e82bd8d9abb51">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-07effdfe0650525368be0ca8aad2d70185322a66.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9ca20572b0ead37588bf84743ea80589e9930854.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b0573af69944be9b9facfa91fafffdb08f442357.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3ff87edfdf23a8b9403a64394b461203546c792f.jar" />
+    </item>
+    <item
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar"
+        revision="24.0.3"
+        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\commons-codec-1.10-77183437e43d03fbf04d48242f704eeda6368256.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="3b7105277df9a8013468215c451ddefac2499d3a">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ce37b57437a480f5e5d4022b10f14c9ff27ac593.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-feebbd90d34860d65129deba8923a83f6925d2f7.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2b3b749979f56d10d3c33607c8f2fbd366ce2321.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-926c50813feed3078a655c1d96534eb73ba15ab9.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-59d68d64e731ce85e16a36a5d638bbb2f7ab15bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\53269\Desktop\Projets_git\EPicture-master\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-2c1872e0f661316dc53c5264cb0c21f42fa7aaf9.jar" />
+    </item>
+
+</items>

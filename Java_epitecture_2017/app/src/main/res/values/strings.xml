@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">EPicture</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="home_page">Home Page</string>
+    <string name="my_pictures">My Pictures</string>
+    <string name="add_picture">Add Picture</string>
+    <string name="authentification">Authentification</string>
+    <string name="upload">Upload</string>
+
+    <string name="ok">OK</string>
+    <string name="add_image">Add Image</string>
+    <string name="get_photo">Capture photo</string>
+    <string name="get_galerie">Galerie</string>
+
+    <string name="error">Error</string>
+    <string name="error_empty">Empty</string>
+    <string name="error_empty_field">You must fill all fields</string>
+
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="send">Send</string>
+
+    <string name="date_transform_years">Il y a %d ans</string>
+    <string name="date_transform_year">Il y a 1 an</string>
+    <string name="date_transform_mouth">Il y a %d mois</string>
+    <string name="date_transform_seconds">Il y a moins d\'une minute</string>
+    <string name="date_transform_minutes">Il y a %d minutes</string>
+    <string name="date_transform_minute">Il y a 1 minute</string>
+    <string name="date_transform_hours">Il y a %d heures</string>
+    <string name="date_transform_hour">Il y a 1 heure</string>
+    <string name="date_transform_yesterday">Hier</string>
+    <string name="date_transform_days">Il y a %d jours</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="upload_in_progress">Upload in progress, please wait</string>
+    <string name="logout_in_progress">Logout in progress, please wait</string>
+
+    <string name="publish_cancel">You are about to cancel your new publication</string>
+    <string name="confirm">confirm</string>
+    <string name="cancel">cancel</string>
+
+    <string name="add_account">Add Account</string>
+    <string name="accounts">Account(s)</string>
+    <string name="platforms">Platform(s)</string>
+    <string name="username">\@%s</string>
+
+    <string name="search">Search</string>
+    <string name="noitem">There are no item to display</string>
+
+    <string name="comment">Comment</string>
+    <string name="submit">Submit</string>
+    <string name="tags">Tags (separated by space)</string>
+
+    <string name="favorites">Favorites</string>
+    <string name="share">Share</string>
+</resources>

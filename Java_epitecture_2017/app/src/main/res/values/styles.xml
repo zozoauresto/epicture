@@ -1,0 +1,71 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="colorControlNormal">@color/white100</item>
+        <item name="colorControlActivated">@color/white100</item>
+        <item name="colorControlHighlight">@color/white75</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/background_100</item>
+
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:buttonStyle">@style/App_ButtonStyle</item>
+        <item name="android:listViewStyle">@style/App_ListViewStyle</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="colorControlNormal">@color/grey_light_100</item>
+        <item name="colorControlActivated">@color/colorPrimary100</item>
+        <item name="colorControlHighlight">@color/colorPrimary50</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">@color/grey_light_100</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="App_CheckedBoxStyle" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/black100</item>
+        <item name="android:textColorSecondary">@color/colorPrimary100</item>
+        <item name="colorAccent">@color/colorPrimary100</item>
+    </style>
+
+    <style name="App_ButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="App_ListViewStyle" parent="android:style/Widget.ListView">
+        <item name="android:divider">@color/grey_light_50</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:listSelector">@color/listitem</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+
+    <style name="App_TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.ColorControlPrimary" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorPrimary100</item>
+        <item name="colorControlActivated">@color/colorPrimary100</item>
+        <item name="colorControlHighlight">@color/colorPrimary75</item>
+    </style>
+
+    <style name="Theme.CustomDialog" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

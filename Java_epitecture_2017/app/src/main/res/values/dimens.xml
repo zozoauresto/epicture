@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="image_size_thumbnail">100dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="gridview_photo_size">100dp</dimen>
+    <dimen name="text_large_size">15.5sp</dimen>
+</resources>

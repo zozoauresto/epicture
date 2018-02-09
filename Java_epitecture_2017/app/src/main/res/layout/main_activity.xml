@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/main_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+                    <TextView
+                        android:id="@+id/main_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_page"
+                        android:textColor="@color/white100"
+                        android:textSize="20sp" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginBottom="18dp"
+                android:id="@+id/main_profilepic_container"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/main_profilepic_blurred"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="#f2f2f2"
+                    android:contentDescription="@null"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/main_profilepic"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp" />
+
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:id="@+id/main_realname"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/main_profilepic"
+                    android:layout_toEndOf="@id/main_profilepic"/>
+
+                <TextView
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:id="@+id/main_username"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_realname"
+                    android:layout_toEndOf="@id/main_profilepic"/>
+
+                <!--<TextView
+                    android:layout_marginBottom="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@id/main_description"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:id="@+id/main_drawer_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/main_profilepic_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:background="@android:color/white"
+                    android:id="@+id/drawer_list"
+                    android:dividerHeight="0dp"
+                    android:divider="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
