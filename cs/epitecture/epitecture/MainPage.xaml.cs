@@ -1,8 +1,12 @@
 ﻿using Imgur.API;
+using Imgur.API.Authentication.Impl;
 using Imgur.API.Endpoints.Impl;
+using Imgur.API.Models;
+using Imgur.API.Models.Impl;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -11,6 +15,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,93 +35,181 @@ namespace epitecture
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public string CLIENT_ID = "ac00dd791475bae";
+        public string CLIENT_SECRET = "33de41b5f2c13e0a8d089e3d52b51925e0210b57";
+        string result;
         public MainPage()
         {
             this.InitializeComponent();
-          //  GetImage();
-        }
-        private async void tokenButton_Click(object sender, RoutedEventArgs e)
-        {
-            await Windows.System.Launcher.LaunchUriAsync(new Uri("https://api.imgur.com/oauth2/authorize?client_id=ac00dd791475bae&response_type=pin"));
         }
 
-        private async void buttonConnection_Click(object sender, RoutedEventArgs e)
+        
+        public async void tryconnectAsync()
         {
-            String pin = pinBox.Text;
-            if (pin.Length > 0)
+            string startURL = "https://api.imgur.com/oauth2/authorize?client_id=" + CLIENT_ID + "&response_type=token";
+            string endURL = "https://imgur.com";
+            Uri startURI = new Uri(startURL);
+            Uri endURI = new Uri(endURL);
+            Debug.WriteLine("ici " + startURI.AbsolutePath);
+            
+
+            try
             {
-                using (HttpClient client = new HttpClient())
+                var webAuthenticationResult =
+                    await Windows.Security.Authentication.Web.WebAuthenticationBroker.AuthenticateAsync(
+                    Windows.Security.Authentication.Web.WebAuthenticationOptions.None,
+                    startURI,
+                    endURI);
+
+                switch (webAuthenticationResult.ResponseStatus)
                 {
-                    var values = new Dictionary<string, string>
-                    {
-                        { "client_id", "ac00dd791475bae" },
-                        { "client_secret", "33de41b5f2c13e0a8d089e3d52b51925e0210b57" },
-                        { "grant_type", "pin" },
-                        { "pin", pinBox.Text }
-                    };
-                    var content = new FormUrlEncodedContent(values);
-                    var response = await client.PostAsync("https://api.imgur.com/oauth2/token", content);
-                    string ret = await response.Content.ReadAsStringAsync();
-                    Debug.WriteLine("ret : " + ret);
-                    Debug.WriteLine("|stop");
-
-                    var getResponse = await client.GetAsync("https://api.imgur.com/3/gallery/");
-                    Debug.WriteLine("here we have : " + getResponse);
-                    Debug.WriteLine("|the end");
-
-                    /*
-                    ImgurUWP_Imgur Imgur = JsonConvert.DeserializeObject<ImgurUWP_Imgur>(ret);
-                    if (Imgur.account_id != 0)
-                    {
-                        this.Frame.Navigate(typeof(SecondPage), Imgur);
-                    }
-                    else
-                    {
-                        Imgur_Request request = JsonConvert.DeserializeObject<Imgur_Request>(ret);
-                        infoBlock.Text = "Error : " + request.data.error;
-                    }
-                    */
-
+                    case Windows.Security.Authentication.Web.WebAuthenticationStatus.Success:
+                        // Successful authentication. 
+                        result = webAuthenticationResult.ResponseData.ToString();
+                        MyButton.Visibility = Visibility.Collapsed;
+                        TextPresentation.Visibility = Visibility.Collapsed;
+                        MyImages.Visibility = Visibility.Visible;
+                        RectangleMenu.Visibility = Visibility.Visible;
+                        ButtonAddImage.Visibility = Visibility.Visible;
+                        ButtonMenu.Visibility = Visibility.Visible;
+                        break;
+                    case Windows.Security.Authentication.Web.WebAuthenticationStatus.ErrorHttp:
+                        // HTTP error. 
+                        result = webAuthenticationResult.ResponseErrorDetail.ToString();
+                        break;
+                    default:
+                        // Other error.
+                        result = webAuthenticationResult.ResponseData.ToString();
+                        break;
                 }
+                Debug.WriteLine("Start : " + result + "|stop");
             }
-            else
+            catch (Exception ex)
             {
-                infoBlock.Text = "Error : Empty pin";
+                // Authentication failed. Handle parameter, SSL/TLS, and Network Unavailable errors here. 
+                result = ex.Message;
             }
         }
 
-        private void pinBox_PointerEntered(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        private void Button_Connection(object sender, RoutedEventArgs e)
         {
-            if (pinBox.Text.CompareTo("PIN code") == 0)
+            tryconnectAsync();
+        }
+
+        private async Task AddImageAsync()
+        {
+            try
             {
-                pinBox.Text = "";
+                var client = new ImgurClient(CLIENT_ID, CLIENT_SECRET, new OAuth2Token(getAccess(), getRefresh(), getType(), getId(), getUser(), int.Parse(getExpires())));
+                var endpoint = new ImageEndpoint(client);
+                IImage image;
+
+                FileOpenPicker openPicker = new FileOpenPicker();
+                openPicker.ViewMode = PickerViewMode.Thumbnail;
+                openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+                openPicker.FileTypeFilter.Add(".jpg");
+                openPicker.FileTypeFilter.Add(".jpeg");
+                openPicker.FileTypeFilter.Add(".png");
+
+                StorageFile file = await openPicker.PickSingleFileAsync();
+                if (file != null)
+                {
+                    // Application now has read/write access to the picked file
+                    var files = file.OpenStreamForReadAsync();
+                    image = await endpoint.UploadImageStreamAsync(files.Result);
+                }
+                }
+            catch (ImgurException imgurEx)
+            {
+                Debug.Write("An error occurred uploading an image to Imgur.");
+                Debug.Write(imgurEx.Message);
             }
         }
 
-        private void pinBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click_AddImage(object sender, RoutedEventArgs e)
         {
-
+            AddImageAsync();
         }
-        /*   public async Task GetImage()
-           {
-               try
-               {
-                   var client = new Imgur.API.Authentication.Impl.ImgurClient("ac00dd791475bae", "33de41b5f2c13e0a8d089e3d52b51925e0210b57");
-                   var endpoint = new ImageEndpoint(client);
-                   var image = await endpoint.GetImageAsync("M29eb");
-                   Debug.Write("Image retrieved. Image Url: " + image.Link);
-                   BitmapImage bi3 = new BitmapImage();
-                   bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
-                   trythis.Stretch = Stretch.Fill;
-                   trythis.Source = bi3;
-
-               }
-               catch (ImgurException imgurEx)
-               {
-                   Debug.Write("An error occurred getting an image from Imgur.");
-                   Debug.Write(imgurEx.Message);
-               }
-           }
+        private async Task GetImageAsync()
+        {
+            /*
+            var client = new ImgurClient(CLIENT_ID);
+            var endpoint = new AccountEndpoint(client);
+            var submissions = await endpoint.GetAccountSubmissionsAsync(getUser());
            */
+            var client = new ImgurClient(CLIENT_ID);
+            var endpoint = new AlbumEndpoint(client);
+            var album = await endpoint.GetAlbumAsync("IwjbO");
+            Debug.WriteLine("album : " + album + "|stop");
+            var images = album.Images;
+            ObservableCollection<Windows.UI.Xaml.Controls.Image> tasks = new ObservableCollection<Windows.UI.Xaml.Controls.Image>();
+            foreach (var image in album.Images)
+            {
+                BitmapImage bi3 = new BitmapImage();
+                bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                var im = new Windows.UI.Xaml.Controls.Image();
+                im.Stretch = Stretch.Fill;
+                im.Source = bi3;
+                MyImages.Items.Add(im);
+            }
+        }
+        private void Button_Click_Menu(object sender, RoutedEventArgs e)
+        {
+            GetImageAsync();
+        }
+
+        public string getAccess()
+        {
+            int pFrom = result.IndexOf("access_token=") + "access_token=".Length;
+            int pTo = result.LastIndexOf("&expires");
+            return result.Substring(pFrom, pTo - pFrom);
+        }
+        public string getExpires()
+        {
+            int pFrom = result.IndexOf("expires_in=") + "expires_in=".Length;
+            int pTo = result.LastIndexOf("&token");
+            return result.Substring(pFrom, pTo - pFrom);
+        }
+        public string getType()
+        {
+            int pFrom = result.IndexOf("token_type=") + "token_type=".Length;
+            int pTo = result.LastIndexOf("&refresh");
+            return result.Substring(pFrom, pTo - pFrom);
+        }
+        public string getRefresh()
+        {
+            int pFrom = result.IndexOf("refresh_token=") + "refresh_token=".Length;
+            int pTo = result.LastIndexOf("&account_username");
+            return result.Substring(pFrom, pTo - pFrom);
+        }
+        public string getUser()
+        {
+            int pFrom = result.IndexOf("account_username=") + "account_username=".Length;
+            int pTo = result.LastIndexOf("&account_id");
+            return result.Substring(pFrom, pTo - pFrom);
+        }
+        public string getId()
+        {
+            int pFrom = result.IndexOf("account_id=") + "account_id=".Length;
+            return result.Substring(pFrom, result.Length - pFrom);
+        }
+
+        public IImage GetImage(String image_id)
+        {
+            try
+            {
+                var client = new ImgurClient(CLIENT_ID, CLIENT_SECRET);
+                var endpoint = new ImageEndpoint(client);
+                var image = endpoint.GetImageAsync(image_id).GetAwaiter().GetResult();
+                Debug.Write("Image retrieved. Image Url: " + image.Link);
+                return image;
+            }
+            catch (ImgurException imgurEx)
+            {
+                Debug.Write("An error occurred getting an image from Imgur.");
+                Debug.Write(imgurEx.Message);
+                return null;
+            }
+        }
     }
 }

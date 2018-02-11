@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>66c318ff-408c-4e11-b8d5-893ed2b39a73</PackageIdentityName>
     <PackageIdentityPublisher>CN=youss</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\youss\source\repos\epitecture\epitecture\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>72F7D61D3573813F5799A639B4F1EA6E6C08E95A2F4E44285C261D0775CC9DD1</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>66c318ff-408c-4e11-b8d5-893ed2b39a73_1.0.0.0_x86__zxja2rc2qxbvw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>66c318ff-408c-4e11-b8d5-893ed2b39a73_zxja2rc2qxbvw!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-10T14:53:42.845</Modified>
+      <Modified>2018-02-11T14:42:47.125</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\epitecture.exe">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\epitecture.exe">
       <PackagePath>entrypoint\epitecture.exe</PackagePath>
-      <Modified>2018-02-10T14:53:42.313</Modified>
+      <Modified>2018-02-11T14:42:45.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\youss\.nuget\packages\imgur.api\4.0.1\lib\netstandard1.1\Imgur.API.dll">
       <PackagePath>Imgur.API.dll</PackagePath>
@@ -511,60 +511,60 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-02-09T16:09:23.199</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-07T15:38:28.698</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\epitecture.xr.xml">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\epitecture.xr.xml">
       <PackagePath>epitecture.xr.xml</PackagePath>
-      <Modified>2018-02-10T14:37:12.198</Modified>
+      <Modified>2018-02-11T14:42:45.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-28T16:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-10T14:37:13.892</Modified>
+      <Modified>2018-02-11T14:42:46.683</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\youss\source\repos\epitecture\epitecture\bin\x86\Debug\Core\epitecture.exe">
+    <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\Core\epitecture.exe">
       <PackagePath>epitecture.exe</PackagePath>
-      <Modified>2018-02-10T14:53:42.838</Modified>
+      <Modified>2018-02-11T14:42:47.115</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

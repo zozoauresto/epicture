@@ -7,11 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
-        <TextBox x:ConnectionId='1' x:Name="pinBox" Margin="91,245,92,0" TextWrapping="Wrap" Text="PIN code"                                        Height="38" VerticalAlignment="Top"                                 />
-        <Button x:ConnectionId='2' x:Name="buttonConnection" Content="Log in" HorizontalAlignment="Center" Height="42" Margin="91,379,92,219" VerticalAlignment="Center" Width="177"                                RenderTransformOrigin="0.5,0.5"/>
-        <TextBlock x:ConnectionId='3' x:Name="infoBlock" Height="36" Margin="91,204,92,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <Button x:ConnectionId='4' x:Name="tokenButton" Content="Get new PIN code" HorizontalAlignment="Center" Height="42" Margin="91,426,92,172" VerticalAlignment="Stretch" Width="177"                          />
-        <Image x:ConnectionId='5' x:Name="image" Source="Assets/imgur.png" HorizontalAlignment="Center" Margin="91,80,92,0" VerticalAlignment="Top" Height="60" RenderTransformOrigin="0.5,0.5" Width="177"/>
+        <Button x:ConnectionId='1' Name="MyButton" Content="Connection Imgur" HorizontalAlignment="Left" Margin="760,438,0,0" VerticalAlignment="Top"                           Height="170" Width="373" FontSize="20"/>
+        <ListView x:ConnectionId='2' Name="MyImages" HorizontalAlignment="Left" Height="899" Margin="293,176,0,0" VerticalAlignment="Top" Width="1627" Visibility="Collapsed">
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+        </ListView>
+        <Rectangle x:ConnectionId='3' Name="RectangleMenu" HorizontalAlignment="Left" Height="997" Margin="0,2,0,0" VerticalAlignment="Top" Width="279" Visibility="Collapsed">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:ConnectionId='4' Name="ButtonAddImage" Content="Add Image" HorizontalAlignment="Left" Margin="2,57,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000"                               Visibility="Collapsed"/>
+        <Button x:ConnectionId='5' Name="ButtonMenu" Content="Menu" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000"                           Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='6' Name="TextPresentation" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="675,163,509,761" Text="Welcome To Epitecture !!" TextWrapping="Wrap" Height="156" Width="736" FontWeight="Bold" FontSize="48"/>
     </Grid>
 </Page>
 

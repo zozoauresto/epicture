@@ -26541,11 +26541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\youss\\source\\repos\\epitecture\\epitecture\\epitecture.csproj",
+      "projectUniqueName": "C:\\Users\\youss\\Documents\\epicture\\cs\\epitecture\\epitecture\\epitecture.csproj",
       "projectName": "epitecture",
-      "projectPath": "C:\\Users\\youss\\source\\repos\\epitecture\\epitecture\\epitecture.csproj",
+      "projectPath": "C:\\Users\\youss\\Documents\\epicture\\cs\\epitecture\\epitecture\\epitecture.csproj",
       "packagesPath": "C:\\Users\\youss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\youss\\source\\repos\\epitecture\\epitecture\\obj\\",
+      "outputPath": "C:\\Users\\youss\\Documents\\epicture\\cs\\epitecture\\epitecture\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
