@@ -27,7 +27,9 @@
         <Button Name="ButtonAddImage" Content="Add Image" HorizontalAlignment="Left" Margin="2,57,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000" Click="Button_Click_AddImage" Visibility="Visible"/>
         <Button Name="ButtonMenu" Content="Menu" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000" Click="Button_Click_Menu" Visibility="Visible"/>
         <TextBlock Name="TextPresentation" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="675,163,509,761" Text="Welcome To Epitecture !!" TextWrapping="Wrap" Height="156" Width="736" FontWeight="Bold" FontSize="48"/>
-        <Button x:Name="ButtonGetGalery" Content="Galery" HorizontalAlignment="Left" Margin="1,109,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000" Click="Button_Click_Galery" Visibility="Visible"/>
+        <Button x:Name="ButtonGetGaleryTag" Content="Galery Tag" HorizontalAlignment="Left" Margin="1,106,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000" Click="Button_Click_Galery_Tag" Visibility="Visible"/>
         <TextBox Name="TextBoxTag" HorizontalAlignment="Left" Margin="0,162,0,0" Text="Tags here without #" VerticalAlignment="Top" Width="284" AcceptsReturn="False" IsReadOnly="False"/>
+        <Button x:Name="ButtonGetGalerySearch" Content="Galery Search" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" Width="279" Height="53" Background="#33000000" Click="Button_Click_Galery_Search" Visibility="Visible"/>
+        <TextBox x:Name="TextBoxSearch" HorizontalAlignment="Left" Margin="1,238,0,0" Text="Search here" VerticalAlignment="Top" Width="284" AcceptsReturn="False" IsReadOnly="False"/>
     </Grid>
 </Page>

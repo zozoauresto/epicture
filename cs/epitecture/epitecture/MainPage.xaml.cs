@@ -193,11 +193,54 @@ namespace epitecture
             }
         }
 
-        private void Button_Click_Galery(object sender, RoutedEventArgs e)
+        private void Button_Click_Galery_Tag(object sender, RoutedEventArgs e)
         {
             GetGaleryTagAsync(TextBoxTag.Text);
         }
 
+        private async Task GetGalerySearchAsync(string search)
+        {
+            var client = new ImgurClient(CLIENT_ID);
+            var endpoint = new GalleryEndpoint(client);
+            var images = await endpoint.SearchGalleryAsync(search);
+
+            MyImages.Items.Clear();
+
+            foreach (var it in images)
+            {
+                if (it.ToString().Equals("Imgur.API.Models.Impl.GalleryAlbum"))
+                {
+                    var here = (GalleryAlbum)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+                else
+                {
+                    var here = (GalleryImage)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+
+            }
+
+        }
+
+        private void Button_Click_Galery_Search(object sender, RoutedEventArgs e)
+        {
+            GetGalerySearchAsync(TextBoxSearch.Text);
+        }
 
 
 
