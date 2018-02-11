@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-11T14:42:47.125</Modified>
+      <Modified>2018-02-11T15:31:21.522</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\epitecture.exe">
       <PackagePath>entrypoint\epitecture.exe</PackagePath>
-      <Modified>2018-02-11T14:42:45.887</Modified>
+      <Modified>2018-02-11T15:31:20.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\youss\.nuget\packages\imgur.api\4.0.1\lib\netstandard1.1\Imgur.API.dll">
       <PackagePath>Imgur.API.dll</PackagePath>
@@ -551,7 +551,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\epitecture.xr.xml">
       <PackagePath>epitecture.xr.xml</PackagePath>
-      <Modified>2018-02-11T14:42:45.672</Modified>
+      <Modified>2018-02-11T15:28:16.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -560,11 +560,11 @@
     <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-11T14:42:46.683</Modified>
+      <Modified>2018-02-11T15:31:21.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\youss\Documents\epicture\cs\epitecture\epitecture\bin\x86\Debug\Core\epitecture.exe">
       <PackagePath>epitecture.exe</PackagePath>
-      <Modified>2018-02-11T14:42:47.115</Modified>
+      <Modified>2018-02-11T15:31:21.516</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

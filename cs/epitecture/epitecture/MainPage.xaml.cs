@@ -130,19 +130,16 @@ namespace epitecture
         {
             AddImageAsync();
         }
-        private async Task GetImageAsync()
+        private async Task GetLibAsync()
         {
-            /*
-            var client = new ImgurClient(CLIENT_ID);
-            var endpoint = new AccountEndpoint(client);
-            var submissions = await endpoint.GetAccountSubmissionsAsync(getUser());
-           */
+
             var client = new ImgurClient(CLIENT_ID);
             var endpoint = new AlbumEndpoint(client);
             var album = await endpoint.GetAlbumAsync("IwjbO");
             Debug.WriteLine("album : " + album + "|stop");
             var images = album.Images;
             ObservableCollection<Windows.UI.Xaml.Controls.Image> tasks = new ObservableCollection<Windows.UI.Xaml.Controls.Image>();
+            MyImages.Items.Clear();
             foreach (var image in album.Images)
             {
                 BitmapImage bi3 = new BitmapImage();
@@ -155,8 +152,59 @@ namespace epitecture
         }
         private void Button_Click_Menu(object sender, RoutedEventArgs e)
         {
-            GetImageAsync();
+            GetLibAsync();
         }
+
+        private async Task GetGaleryTagAsync(string Stag)
+        {
+            var client = new ImgurClient(CLIENT_ID);
+            var endpoint = new GalleryEndpoint(client);
+            var tag = await endpoint.GetGalleryTagAsync(Stag);
+
+            MyImages.Items.Clear();
+
+            foreach (var it in tag.Items)
+            {
+                if (it.ToString().Equals("Imgur.API.Models.Impl.GalleryAlbum"))
+                {
+                    var here = (GalleryAlbum)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+                else
+                {
+                    var here = (GalleryImage)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+
+            }
+        }
+
+        private void Button_Click_Galery(object sender, RoutedEventArgs e)
+        {
+            GetGaleryTagAsync(TextBoxTag.Text);
+        }
+
+
+
+
+
+
+
+
 
         public string getAccess()
         {
@@ -211,5 +259,7 @@ namespace epitecture
                 return null;
             }
         }
+
+
     }
 }
