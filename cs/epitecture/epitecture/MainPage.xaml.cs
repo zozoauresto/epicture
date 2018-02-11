@@ -3,28 +3,17 @@ using Imgur.API.Authentication.Impl;
 using Imgur.API.Endpoints.Impl;
 using Imgur.API.Models;
 using Imgur.API.Models.Impl;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,14 +26,14 @@ namespace epitecture
     {
         public string CLIENT_ID = "ac00dd791475bae";
         public string CLIENT_SECRET = "33de41b5f2c13e0a8d089e3d52b51925e0210b57";
+        public bool status = false;
         string result;
         public MainPage()
         {
             this.InitializeComponent();
         }
-
         
-        public async void tryconnectAsync()
+    public async void tryconnectAsync()
         {
             string startURL = "https://api.imgur.com/oauth2/authorize?client_id=" + CLIENT_ID + "&response_type=token";
             string endURL = "https://imgur.com";
@@ -72,7 +61,7 @@ namespace epitecture
                         RectangleMenu.Visibility = Visibility.Visible;
                         ButtonAddImage.Visibility = Visibility.Visible;
                         ButtonMenu.Visibility = Visibility.Visible;
-                        break;
+                       break;
                     case Windows.Security.Authentication.Web.WebAuthenticationStatus.ErrorHttp:
                         // HTTP error. 
                         result = webAuthenticationResult.ResponseErrorDetail.ToString();
@@ -94,6 +83,47 @@ namespace epitecture
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
             tryconnectAsync();
+        }
+
+        private async Task addFavoriteAsync(string image_id)
+        {
+            Debug.WriteLine("my image id : " + image_id);
+            var client = new ImgurClient(CLIENT_ID, new OAuth2Token(getAccess(), getRefresh(), getType(), getId(), getUser(), int.Parse(getExpires())));
+            var endpoint = new ImageEndpoint(client);
+            var favorited = await endpoint.FavoriteImageAsync(image_id);
+        }
+
+        private async Task delFavoriteAsync(string image_id)
+        {
+            Debug.WriteLine("my image id : " + image_id);
+            var client = new ImgurClient(CLIENT_ID, new OAuth2Token(getAccess(), getRefresh(), getType(), getId(), getUser(), int.Parse(getExpires())));
+            var endpoint = new ImageEndpoint(client);
+            var favorited = await endpoint.FavoriteImageAsync(image_id);
+        }
+
+        private void OnClickItem(object sender, SelectionChangedEventArgs e)
+        {
+            Debug.WriteLine("i came to here : " + e.RemovedItems.Count + " " + e.AddedItems.Count);
+            if (e.RemovedItems.Count > 0 && e.AddedItems.Count != 1)
+                return ;
+            Debug.WriteLine("but not here");
+
+            var item = (Windows.UI.Xaml.Controls.Image)e.AddedItems[0];
+            BitmapImage bi3 = (BitmapImage)item.Source;
+
+            int to = bi3.UriSource.AbsolutePath.LastIndexOf(".");
+            if (status)
+            {
+                // add favourite
+                addFavoriteAsync(bi3.UriSource.AbsolutePath.Substring(1, to - 1));
+            }
+            else
+            {
+                // del favorite
+                delFavoriteAsync(bi3.UriSource.AbsolutePath.Substring(1, to - 1));
+
+            }
+
         }
 
         private async Task AddImageAsync()
@@ -133,26 +163,47 @@ namespace epitecture
         private async Task GetLibAsync()
         {
 
-            var client = new ImgurClient(CLIENT_ID);
-            var endpoint = new AlbumEndpoint(client);
-            var album = await endpoint.GetAlbumAsync("IwjbO");
-            Debug.WriteLine("album : " + album + "|stop");
-            var images = album.Images;
-            ObservableCollection<Windows.UI.Xaml.Controls.Image> tasks = new ObservableCollection<Windows.UI.Xaml.Controls.Image>();
+            var client = new ImgurClient(CLIENT_ID, new OAuth2Token(getAccess(), getRefresh(), getType(), getId(), getUser(), int.Parse(getExpires())));
+            var endpoint = new AccountEndpoint(client);
+            var favourites = await endpoint.GetAccountFavoritesAsync();
+
+            //MyImages.SelectedItems.Clear();
             MyImages.Items.Clear();
-            foreach (var image in album.Images)
+
+            foreach (var it in favourites)
             {
-                BitmapImage bi3 = new BitmapImage();
-                bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
-                var im = new Windows.UI.Xaml.Controls.Image();
-                im.Stretch = Stretch.Fill;
-                im.Source = bi3;
-                MyImages.Items.Add(im);
+                if (it.ToString().Equals("Imgur.API.Models.Impl.GalleryAlbum"))
+                {
+                    var here = (GalleryAlbum)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+                else
+                {
+                    var here = (GalleryImage)it;
+                    var image = GetImage(here.Id);
+
+                    BitmapImage bi3 = new BitmapImage();
+                    bi3.UriSource = new Uri(image.Link, UriKind.Absolute);
+                    var im = new Windows.UI.Xaml.Controls.Image();
+                    im.Stretch = Stretch.Fill;
+                    im.Source = bi3;
+                    MyImages.Items.Add(im);
+                }
+
             }
+
         }
         private void Button_Click_Menu(object sender, RoutedEventArgs e)
         {
             GetLibAsync();
+            status = false;
         }
 
         private async Task GetGaleryTagAsync(string Stag)
@@ -161,7 +212,9 @@ namespace epitecture
             var endpoint = new GalleryEndpoint(client);
             var tag = await endpoint.GetGalleryTagAsync(Stag);
 
+            //MyImages.SelectedItems.Clear();
             MyImages.Items.Clear();
+            
 
             foreach (var it in tag.Items)
             {
@@ -196,6 +249,7 @@ namespace epitecture
         private void Button_Click_Galery_Tag(object sender, RoutedEventArgs e)
         {
             GetGaleryTagAsync(TextBoxTag.Text);
+            status = true;
         }
 
         private async Task GetGalerySearchAsync(string search)
@@ -240,6 +294,7 @@ namespace epitecture
         private void Button_Click_Galery_Search(object sender, RoutedEventArgs e)
         {
             GetGalerySearchAsync(TextBoxSearch.Text);
+            status = true;
         }
 
 
